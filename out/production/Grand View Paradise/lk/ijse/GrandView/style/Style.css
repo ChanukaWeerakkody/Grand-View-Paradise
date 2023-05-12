@@ -1,0 +1,82 @@
+.Parent{
+    -fx-background-color: white;
+}
+.left-button{
+    -fx-background-color: linear-gradient(to right,#192053,#726cab);
+}
+.left-pane{
+    -fx-background-color: linear-gradient(to right, #382238, #531054);
+}
+.left-pane-radius{
+    -fx-background-color: linear-gradient(to right, #382238, #531054);
+    -fx-background-radius: 0 70 70 0;
+}
+.center-pane{
+    -fx-background-color: linear-gradient(to right, rgba(128, 127, 128, 0.2), rgba(199, 197, 197, 0.16));
+}
+.pane-transparent{
+    -fx-background-color: linear-gradient(to right, rgb(182, 181, 182), rgb(187, 186, 186));
+}
+.right-pane{
+    -fx-background-color: linear-gradient(to right, #8c8585, #d1cdd3);
+}
+.right-pane-first{
+    -fx-background-color: #8c8585;
+}
+.btn-radius{
+    -fx-background-radius: 20px;
+}
+.right-button{
+    -fx-background-color:  #d1ccc0;
+}
+.left-button:hover{
+    -fx-background-color: linear-gradient(to right,#192053, #a71067);
+}
+.card{
+    -fx-background-color: linear-gradient(to right,#2e4d6e, #276a99);
+}
+.add-btn{
+    -fx-background-color: #275578;
+    -fx-background-radius: 20px;
+}
+.add-btn:hover{
+    -fx-background-color: #2975ab;
+}
+.update-btn{
+    -fx-background-color: #277737;
+    -fx-background-radius: 20px;
+}
+.update-btn:hover{
+    -fx-background-color: #30ab67;
+}
+
+.delete-btn{
+    -fx-background-color: #822730;
+    -fx-background-radius: 20px;
+}
+.delete-btn:hover{
+    -fx-background-color: #b52a38;
+}
+.search-btn{
+    -fx-background-color: #7c3186;
+    -fx-background-radius: 20px;
+}
+.search-btn:hover{
+    -fx-background-color: #9328a4;
+}
+#imgHome:hover{
+    -fx-effect: dropshadow(gaussian, #12326b,20,0.0,0,0);
+}
+.center-button{
+    -fx-background-color: #b6d5e1;
+    -fx-background-radius: 30px;
+}
+.complaint-button{
+    -fx-background-color: #c28291;
+    -fx-background-radius: 30px;
+}
+#middlePane{
+    //-fx-effect: dropshadow(gaussian, #12326b,20,0.0,0,0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+

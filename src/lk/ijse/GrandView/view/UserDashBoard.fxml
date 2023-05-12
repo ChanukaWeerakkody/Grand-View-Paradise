@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="1003.0" prefWidth="1935.0" styleClass="right-pane" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.GrandView.controller.UserDashBoardController">
+   <children>
+      <AnchorPane fx:id="barPane" layoutY="-1.0" prefHeight="1004.0" prefWidth="250.0" styleClass="right-pane-first">
+         <children>
+            <Pane layoutY="52.0" prefHeight="925.0" prefWidth="167.0" styleClass="left-pane-radius">
+               <children>
+                  <ImageView id="imgHome" accessibleRole="BUTTON" fitHeight="65.0" fitWidth="81.0" layoutX="41.0" layoutY="799.0" onMouseClicked="#logOutOnAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asessts/logout-icon-18-64.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Pane layoutX="21.0" layoutY="46.0" prefHeight="730.0" prefWidth="125.0" style="-fx-background-radius: 40;" styleClass="center-pane">
+                     <children>
+                        <VBox layoutX="30.0" layoutY="119.0" prefHeight="593.0" prefWidth="70.0">
+                           <children>
+                              <ImageView id="imgHome" accessibleRole="BUTTON" fitHeight="89.0" fitWidth="68.0" onMouseClicked="#dashBoardOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-home-100.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Home" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imgHome" fitHeight="94.0" fitWidth="69.0" onMouseClicked="#mealsOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-food-64.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Meals" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label />
+                              <ImageView id="imgHome" fitHeight="92.0" fitWidth="66.0" onMouseClicked="#paymentOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-pay-90.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="38.0" prefWidth="70.0" text="Payment" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imgHome" fitHeight="72.0" fitWidth="70.0" onMouseClicked="#guestOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-collaborator-male-100.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Guests" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label />
+                              <ImageView id="imgHome" fitHeight="86.0" fitWidth="65.0" onMouseClicked="#complaintOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-thinking-male-64.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Complaint" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imgHome" fitHeight="108.0" fitWidth="69.0" onMouseClicked="#roomsOnAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asessts/icons8-bed-64.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Rooms" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="subPane" layoutX="250.0" prefHeight="1005.0" prefWidth="1685.0" styleClass="right-pane">
+         <children>
+            <JFXButton layoutX="60.0" layoutY="72.0" onAction="#btnAboutUsOnAction" styleClass="center-button" text="About Us">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="227.0" layoutY="71.0" onAction="#btnContactOnAction" prefHeight="54.0" prefWidth="138.0" styleClass="center-button" text="Contact">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane id="middlePane" layoutX="27.0" layoutY="171.0" prefHeight="809.0" prefWidth="1625.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+               <children>
+                  <Pane layoutX="82.0" layoutY="66.0" prefHeight="175.0" prefWidth="465.0" styleClass="center-button">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="131.0" layoutX="28.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-bed-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="173.0" layoutY="98.0" text="Total Rooms">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalRooms" layoutX="179.0" layoutY="5.0" text="10">
+                           <font>
+                              <Font name="System Bold Italic" size="71.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="1121.0" layoutY="66.0" prefHeight="175.0" prefWidth="465.0" styleClass="center-button">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="131.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-bed-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="162.0" layoutY="98.0" text="Available Rooms">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAvailableRooms" layoutX="179.0" layoutY="5.0" text="10">
+                           <font>
+                              <Font name="System Bold Italic" size="71.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="591.0" layoutY="66.0" prefHeight="175.0" prefWidth="465.0" styleClass="center-button">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="131.0" layoutX="28.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-booking-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="173.0" layoutY="98.0" text="Booked Rooms">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBookedRooms" layoutX="179.0" layoutY="5.0" text="10">
+                           <font>
+                              <Font name="System Bold Italic" size="71.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="82.0" layoutY="290.0" prefHeight="209.0" prefWidth="348.0" styleClass="center-button">
+                     <children>
+                        <Label layoutX="23.0" layoutY="146.0" text="Booked Halls">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBookedHalls" layoutX="19.0" layoutY="27.0" text="10">
+                           <font>
+                              <Font name="System Bold Italic" size="71.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="131.0" fitWidth="131.0" layoutX="186.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-booking-64.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="463.0" layoutY="289.0" prefHeight="209.0" prefWidth="348.0" styleClass="center-button">
+                     <children>
+                        <Label layoutX="23.0" layoutY="147.0" text="Available Halls">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAvailableHalls" layoutX="19.0" layoutY="5.0" text="10">
+                           <font>
+                              <Font name="System Bold Italic" size="71.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="131.0" fitWidth="131.0" layoutX="161.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-loading-67.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="703.0" layoutY="431.0" style="-fx-text-fill: #996515;" text="GRAND VIEW PARADISE">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="77.0" layoutY="536.0" prefHeight="246.0" prefWidth="733.0" styleClass="complaint-button">
+                     <children>
+                        <ImageView fitHeight="207.0" fitWidth="163.0" layoutX="8.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asessts/icons8-thinking-male-64.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="492.0" layoutY="172.0" text="Complaints">
+                           <font>
+                              <Font name="System Bold Italic" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblComplaint" layoutX="559.0" layoutY="32.0" text="1">
+                           <font>
+                              <Font name="System Bold Italic" size="96.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="250.0" fitWidth="330.0" layoutX="1218.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asessts/border.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="837.0" layoutY="10.0" style="-fx-text-fill: #996515;" text="Dashboard">
+               <font>
+                  <Font name="System Bold Italic" size="62.0" />
+               </font>
+            </Label>
+            <Label layoutX="968.0" layoutY="84.0" style="-fx-text-fill: #996515;" text="Receptionist">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+            </Label>
+            <Pane id="middlePane" layoutX="1367.0" layoutY="18.0" prefHeight="131.0" prefWidth="285.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+               <children>
+                  <Label fx:id="lblTime" layoutX="23.0" layoutY="32.0" text="00 : 00 :00">
+                     <font>
+                        <Font name="System Bold" size="49.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

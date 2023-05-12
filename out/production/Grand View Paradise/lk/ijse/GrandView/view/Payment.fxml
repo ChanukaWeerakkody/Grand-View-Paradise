@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="subPane" prefHeight="1005.0" prefWidth="1685.0" styleClass="right-pane" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.GrandView.controller.PaymentController">
+   <children>
+      <Label layoutX="45.0" layoutY="18.0" style="-fx-text-fill: #996515;" text="Payment">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <Pane id="middlePane" layoutX="36.0" layoutY="170.0" prefHeight="809.0" prefWidth="1625.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+         <children>
+            <Label fx:id="lblTotalPrice" layoutX="1071.0" layoutY="156.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPaymentId" layoutX="341.0" layoutY="161.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMealCharges" layoutX="341.0" layoutY="321.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRoomCharges" layoutX="341.0" layoutY="401.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="263.0" fitWidth="420.0" layoutX="58.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asessts/border.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label layoutX="109.0" layoutY="330.0" text="Payment id         :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="568.0" text="Room Charges   :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="488.0" text="Meal Charges     :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtGuestId" layoutX="380.0" layoutY="414.0" prefHeight="33.0" prefWidth="352.0" />
+      <Label layoutX="111.0" layoutY="412.0" text="Guest Id              :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1053.0" layoutY="802.0" onAction="#printOnAction" style="-fx-background-color: #d1ccc0; -fx-background-radius: 20;" text="Print">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="1228.0" layoutY="803.0" onAction="#placeOrderOnAction" styleClass="add-btn" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane id="middlePane" layoutX="1376.0" layoutY="13.0" prefHeight="131.0" prefWidth="285.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+         <children>
+            <Label fx:id="lblTime" layoutX="23.0" layoutY="32.0" text="00 : 00 :00">
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="850.0" layoutY="588.0" text="Balance              :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="850.0" layoutY="328.0" text="Total Price         :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPayment" layoutX="1120.0" layoutY="494.0" prefHeight="33.0" prefWidth="352.0" />
+      <Label layoutX="851.0" layoutY="492.0" text="Payment            :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBilledDate" layoutX="1103.0" layoutY="411.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="850.0" layoutY="408.0" text="Billed Date         :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" layoutX="1103.0" layoutY="591.0" prefHeight="33.0" prefWidth="352.0" text="Label">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

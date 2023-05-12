@@ -1,0 +1,149 @@
+create database grandview;
+use grandview;
+
+create table employee(
+	emp_id VARCHAR(45) NOT NULL,
+    emp_name VARCHAR(45),
+    address TEXT,
+    contact_number INT,
+    CONSTRAINT PRIMARY KEY(emp_id)
+);
+
+create table user(
+	emp_id VARCHAR(45),
+	system_role VARCHAR(20),
+   	 username VARCHAR(45),
+   	 password VARCHAR(45),
+   	 CONSTRAINT FOREIGN KEY(emp_id) REFERENCES employee(emp_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+create table hall(
+	hall_id VARCHAR(30),
+    name VARCHAR(45),
+    type VARCHAR(45),
+    price DOUBLE,
+    CONSTRAINT PRIMARY KEY(hall_id)
+);
+
+create table room(
+	room_id VARCHAR(45),
+	status VARCHAR(20),
+   	 room_type VARCHAR(45),
+   	 price DOUBLE,
+     hall_id VARCHAR(30),
+     CONSTRAINT PRIMARY KEY(room_id),
+   	 CONSTRAINT FOREIGN KEY(hall_id) REFERENCES hall(hall_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+create table meal(
+	meal_id VARCHAR(30),
+    type VARCHAR(45),
+    description VARCHAR(45),
+    price DOUBLE,
+    CONSTRAINT PRIMARY KEY(meal_id)
+);
+
+create table guest(
+	guest_id VARCHAR(30),
+    name VARCHAR(45),
+    address TEXT,
+    contact INT,
+    CONSTRAINT PRIMARY KEY(guest_id)
+);
+
+create table complaint(
+	com_id VARCHAR(45),
+    guest_id VARCHAR(30),
+    description VARCHAR(45),
+    hall_id VARCHAR(30),
+    room_id VARCHAR(45),
+    date DATE,
+    CONSTRAINT PRIMARY KEY(com_id),
+    CONSTRAINT FOREIGN KEY(guest_id) REFERENCES guest(guest_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY(hall_id) REFERENCES hall(hall_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY(room_id) REFERENCES room(room_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+create table mealDetails(
+	order_id VARCHAR(30),
+	meal_id VARCHAR(30),
+    guest_id VARCHAR(30),
+	description VARCHAR(20),
+    qty INT,
+   	 price DOUBLE,
+	CONSTRAINT PRIMARY KEY(order_id),
+   	 CONSTRAINT FOREIGN KEY(meal_id) REFERENCES meal(meal_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY(guest_id) REFERENCES guest(guest_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+create table payment(
+	payment_id VARCHAR(30),
+    guest_id VARCHAR(30),
+	meal_id VARCHAR(30),
+    room_id VARCHAR(45),
+    total double,
+    billed_date date,
+    payment double,
+    balance double,
+	CONSTRAINT PRIMARY KEY(payment_id),
+    CONSTRAINT FOREIGN KEY(guest_id) REFERENCES guest(guest_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+   	 CONSTRAINT FOREIGN KEY(meal_id) REFERENCES meal(meal_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY(room_id) REFERENCES room(room_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+create table room_details(
+	reserv_id VARCHAR(30),
+    guest_id VARCHAR(30),
+	hall_id VARCHAR(30),
+    room_id VARCHAR(45),
+    in_date date,
+    out_date date,
+    price double,
+	CONSTRAINT PRIMARY KEY(reserv_id),
+    CONSTRAINT FOREIGN KEY(guest_id) REFERENCES guest(guest_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+   	 CONSTRAINT FOREIGN KEY(hall_id) REFERENCES hall(hall_id)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT FOREIGN KEY(room_id) REFERENCES room(room_id)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

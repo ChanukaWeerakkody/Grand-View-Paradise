@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="subPane" prefHeight="1005.0" prefWidth="1685.0" styleClass="right-pane" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.GrandView.controller.RoomController">
+   <children>
+      <Label layoutX="45.0" layoutY="18.0" style="-fx-text-fill: #996515;" text="Rooms">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <Pane id="middlePane" layoutX="37.0" layoutY="170.0" prefHeight="809.0" prefWidth="1625.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+         <children>
+            <JFXComboBox fx:id="cmbStatus" layoutX="341.0" layoutY="236.0" onAction="#statusOnAction" prefHeight="33.0" prefWidth="352.0" />
+         </children></Pane>
+      <Label layoutX="115.0" layoutY="330.0" text="Room Id              :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="538.0" text="Price                    :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="468.0" text="Type                    :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRoomId" layoutX="379.0" layoutY="336.0" prefHeight="33.0" prefWidth="352.0" />
+      <JFXTextField fx:id="txtPrice" layoutX="381.0" layoutY="545.0" prefHeight="33.0" prefWidth="352.0" />
+      <JFXTextField fx:id="txtType" layoutX="380.0" layoutY="472.0" prefHeight="33.0" prefWidth="352.0" />
+      <Label layoutX="116.0" layoutY="392.0" text="Status                  :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClear" layoutX="433.0" layoutY="732.0" onAction="#clearOnAction" style="-fx-background-color: #d1ccc0; -fx-background-radius: 20;" text="Clear">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="598.0" layoutY="733.0" onAction="#addOnAction" styleClass="add-btn" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="99.0" layoutY="864.0" onAction="#updateOnAction" prefHeight="74.0" prefWidth="189.0" styleClass="update-btn" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSearch" layoutX="318.0" layoutY="863.0" onAction="#searchOnAction" prefHeight="74.0" prefWidth="189.0" styleClass="search-btn" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="542.0" layoutY="863.0" onAction="#deleteOnAction" prefHeight="74.0" prefWidth="189.0" styleClass="delete-btn" stylesheets="@../style/Style.css" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblRooms" layoutX="842.0" layoutY="260.0" prefHeight="678.0" prefWidth="777.0">
+         <columns>
+            <TableColumn fx:id="colRoomId" prefWidth="136.66668701171875" text="Room id" />
+            <TableColumn fx:id="colStatus" prefWidth="132.0" text="Status" />
+            <TableColumn fx:id="colType" prefWidth="139.6666259765625" text="Type" />
+            <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="196.666748046875" text="Price" />
+            <TableColumn fx:id="colHallId" prefWidth="170.333251953125" text="Hall id" />
+         </columns>
+      </TableView>
+      <Pane id="middlePane" layoutX="1376.0" layoutY="13.0" prefHeight="131.0" prefWidth="285.0" style="-fx-background-radius: 40;" styleClass="pane-transparent">
+         <children>
+            <Label fx:id="lblTime" layoutX="23.0" layoutY="32.0" text="00 : 00 :00">
+               <font>
+                  <Font name="System Bold" size="49.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="110.0" layoutY="608.0" text="Hall Id                 :">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtHallId" layoutX="381.0" layoutY="615.0" prefHeight="33.0" prefWidth="352.0" />
+   </children>
+</AnchorPane>
